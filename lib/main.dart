@@ -1,4 +1,4 @@
-import 'package:flutter/foundation.dart';
+
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
@@ -15,7 +15,7 @@ class _MyAppState extends State<MyApp> {
     if (themeSwitch) {
       return Colors.grey[850];
     } else {
-      return Colors.greenAccent;
+      return Color(0XFFEBF2FA);
     }
   }
 
@@ -37,15 +37,14 @@ class _MyAppState extends State<MyApp> {
             icon: themeSwitch
                 ? Icon(
               Icons.brightness_3,
-              color: themeSwitch ? Colors.greenAccent : Colors.grey[850],
+              color: themeSwitch ? Color(0XFFEBF2FA) : Colors.grey[850],
             )
                 : Icon(
               Icons.wb_sunny,
-              color: themeSwitch ? Colors.greenAccent : Colors.grey[850],
+              color: themeSwitch ? Color(0XFFEBF2FA): Colors.grey[850],
             ),
           ),
-
-        ),
+          ),
         body: SafeArea(
           child: Container(
             color: themeColors(),
@@ -59,31 +58,10 @@ class _MyAppState extends State<MyApp> {
                       bottom: Radius.circular(30.0),
                     ),
                   ),
-                  padding: EdgeInsets.all(20.0),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
+                  padding: EdgeInsets.only(left:16.0,right:16.0),
+                  child: Column(crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
-                      Text(
-                        "unsplassh",
-                        style: TextStyle(
-                            color: themeSwitch
-                                ? Colors.greenAccent
-                                : Colors.grey[850],
-                            fontSize: 26.0),
-                      ),
-                      SizedBox(height: 5.0),
-                      Text(
-                        "Photos for everyone",
-                        style: TextStyle(
-                          color: themeSwitch
-                              ? Colors.greenAccent
-                              : Colors.grey[850],
-                          fontSize: 40.0,
-                        ),
-                      ),
-                      SizedBox(
-                        height: 20.0,
-                      ),
+
                       Container(
                         padding: EdgeInsets.all(5.0),
                         decoration: BoxDecoration(
@@ -97,7 +75,7 @@ class _MyAppState extends State<MyApp> {
                               Icons.search,
                               color: Colors.black,
                             ),
-                            hintText: "Search for photos",
+                            hintText: "Search",
                             hintStyle:
                             TextStyle(color: Colors.grey, fontSize: 15.0),
                           ),
@@ -124,7 +102,7 @@ class _MyAppState extends State<MyApp> {
                           fontSize: 15.0,
                           fontWeight: FontWeight.bold,
                           color: themeSwitch
-                              ? Colors.greenAccent
+                              ? Color(0XFFEBF2FA)
                               : Colors.grey[850],
                         ),
                       ),
